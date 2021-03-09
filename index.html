@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Prefeitura de Tangamandapio</title>
+
+    <link href="./Bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="./Bootstrap/album.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">Urna Eletronica</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#candidatos">Candidatos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#vote">Vote</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#cadastrarSenha" onclick="cadastrarSenha()">Cadastrar Senha</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#limparvotos" onclick="limparVotos()">Limpar Votos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">A prefeitura convida-os para as Eleições 2020</h1>
+            <p class="lead text-muted" id="candidatos">Abaixo você vera seus candidados, caso nenhum seja do seu agrado, vote 05 para voto nulo e 06 para volto branco.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="candidatos py-5 bg-light">
+            <div id="candidatos" class="container">
+
+                <div class=" row ">
+                    <div class="col-md-3 ">
+                        <div class="card mb-3 box-shadow ">
+                            <img class="card-img-top " src="img/pic01.jpg. ">
+                            <div class="card-body ">
+                                <p class="card-text ">Marcos Antonio</p>
+                                <div class="d-flex justify-content-between align-items-center ">
+                                    <small class="text-muted ">Vote 01 para votar no relampago marquinhos, katiuauuuuu, apenas outro dono do site e que também não investiu nenhum centavo.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 ">
+                        <div class="card mb-3 box-shadow ">
+                            <img class="card-img-top " src="img/pic02.jpg. ">
+                            <div class="card-body ">
+                                <p class="card-text ">Danilo Vasconcellos</p>
+                                <div class="d-flex justify-content-between align-items-center ">
+                                    <small class="text-muted ">Vote 02 para votar no Cuecao de couro, memático e outro dono do site que botou todo resto exceto a duda para trabalhar.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 ">
+                        <div class="card mb-3 box-shadow ">
+                            <img class="card-img-top " src="img/pic03.jpg. ">
+                            <div class="card-body ">
+                                <p class="card-text ">Matheus Telles</p>
+                                <div class="d-flex justify-content-between align-items-center ">
+                                    <small class="text-muted ">Vote 03 para votar no Telleszao, dono de varias empresas, porém nenhuma patrocinou esta camapnha e ainda cobrou para expor sua foto.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 ">
+                        <div class="card mb-3 box-shadow ">
+                            <img class="card-img-top " src="img/pic04.jpg ">
+                            <div class="card-body ">
+                                <p class="card-text ">Maria Eduarda</p>
+                                <div class="d-flex justify-content-between align-items-center ">
+                                    <small class="text-muted ">Vote 04 para votar no duda pips, dona do site e a pessoa que botou todo mundo para trabalhar e ainda cobrou royalties</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="vote" class="container text-center">
+        <div class="row justify-content-md-center">
+            <div class="branco">
+                <div class="cinzaClaro">
+                    <p>Número:</p>
+                    <form action="">
+                        <input size="1" id="campo1" value="" maxlength="1" type="text" readonly="readonly" />
+                        <input size="1" id="campo2" value="" maxlength="1" type="text" readonly="readonly" />
+                    </form>
+                </div>
+                <div class="cinzaEscuro">
+                    <b>JUSTIÇA ELEITORAL</b>
+                </div>
+                <div class="col-md-50 ">
+                    <button type="button" class="btn btn-info" onclick="inserir(1)">1</button>
+                    <button type="button" class="btn btn-info" onclick="inserir(2)">2</button>
+                    <button type="button" class="btn btn-info" onclick="inserir(3)">3</button>
+                    <button type="button" class="btn btn-info" onclick="inserir(4)">4</button>
+                    <button type="button" class="btn btn-info" onclick="inserir(5)">5</button>
+                    <button type="button" class="btn btn-info" onclick="inserir(6)">6</button>
+                    <button type="button" class="btn btn-info" onclick="inserir(7)">7</button>
+                    <button type="button" class="btn btn-info" onclick="inserir(8)">8</button>
+                    <button type="button" class="btn btn-info" onclick="inserir(9)">9</button>
+                    <button type="button" class="btn btn-info" onclick="inserir(0)">0</button>
+                    <br>
+                    <br>
+                    <div class="teclado2">
+                        <button type="button" class="btn btn-warning" onclick="corrige()">Corrigir</button>
+                        <button type="button" class="btn btn-success" onclick="votar()">Confirmar</button>
+                        <button type="button" class="btn btn-primary" onclick="resultado()" data-toggle="modal" data-target="#modalvoto">Resultado</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <footer>
+        <div class="candidatos py-5 bg-light">
+        <footer class="page-footer font-small indigo">
+
+    <div class="container text-center text-md-left">
+                <div class="row">
+                    <div class="col-md-3 mx-auto">
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Desenvolvedores</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://www.instagram.com/marcos.antt/">Marcos Antonio da Silva</a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/danilodemv/">Danilo Vasconcellos</a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/eduardaaze_/">Maria Eduarda Azevedo</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mx-auto">
+                        <img src="https://www.universidadedevassouras.edu.br/layout/images/imagesiconeshead/logo.svg" width="250px" height="250px">  
+                    </div>
+                  
+                    <div class="col-md-3 mx-auto">
+                        
+                       <img src="img/logo-eng-soft.svg" width="200px" height="200px">
+                        
+                    </div>
+                     </div>
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="https://universidadedevassouras.edu.br/"> Universidade de Vassouras</a>
+            </div>
+    </div>    
+    </footer>
+<!-- Modal -->
+<div class="modal fade" id="modalvoto" tabindex="-1" role="dialog" aria-labelledby="modalvotoLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Resultados</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="resultado1" class="modal-body">
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          
+        </div>
+      </div>
+    </div>
+</div>
+    <script type="text/javascript " src="js/scripts.js "></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+ 
+</body>
+
+</html>
